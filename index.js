@@ -71,14 +71,15 @@ const Goods = function(price, name, discount){
     this.discount = discount;
 }
 
-const Burger = function(price,name,discount,FoodGoods = `1000ККал`){
+const Burger = function(price,name,discount, FoodGoods, СlothingGoods, TechnicsGoods){
     Goods.call(this,price,name,discount);
     this.FoodGoods = FoodGoods;
-    this.type = 'eat';
+    this.СlothingGoods = СlothingGoods;
+    this.TechnicsGoods = TechnicsGoods;
 };
 
 Burger.prototype = new Goods();
 
-const bigMac = new Burger('200$','bigMac','10%', '500ККал');
+const bigMac = new Burger('200$','bigMac','10%', '500ККал', 'Хлеб и мясо', 'Гриль');
 
 console.log(bigMac);
